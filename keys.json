@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "caramel-duality-362212",
+  "private_key_id": "ab2021a79cb21d4ac47115cf1604796c8a01c832",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDRdZf5iYY7AFJU\nQK40zAqTcfEbs1KfS6z6SkR8srlXEFBp2ynvu5f9Kfwv7ZAPyBr7DzKXCyTkDqAX\nou1IJEad1XC4STV7o8VjW5yuCgc+DLo79rO7lX4sDRPReW3jPSZTDMyuygosLfd5\n1Tp6iAJlkAJXqj81U6xWHXRt6io34jiP+MHrtDmNNEPvPx0vOhYFgVoMu1xwFKK/\nN4XgC94j0PyorZD611wlReQgnsbHjOporFHRNENWIq/aFafGmO52yucbQ4lb4cTY\nXaDNvW94ChuFB2TkHIiJNrdmawt6wJKkeiI1iDn4fP7xfZQY9sR43SIIDTKC5342\nsejHzYVjAgMBAAECggEASpH2/Rv88dx3cw9j9d/+k+eo0xfQfm3Os3zlTQ/D9D8W\nodko4PSEc9kSs218MGIpWOBcPnH1PEwIquGSYHCpw19Ntg46QD5Z87mV2lAvq+OU\nGe0Gp+3c8YnmWFlGyfPnRQH1jPTZEkl7JaDIJP9u+wF+E//EaRPU8wOhg9AuH56B\nDpFtsqp502lZcdHtsjKHDRWdUCBGJ+ifkLCkO3asHVLyCbNVEyciHeExrbnSfNp1\nxG9KBryEXAjb7mRGUona26I9/pArtaoM+NTi564eA2xVBPRJNuo0QiX31j8v/UyK\nKoggThyZWleDv0MRB4uvv7oDaj3/slMyH3s8a1hfQQKBgQD3ZornRN3sckQEet9Q\nKMtae2A9s06gm9AynS6OEC+mDDFPAoeJtnpcxb4Nx2ulNAopfAytWGOsd4m4rmlM\nrwXBnWTV6BaTuW7qFvfWRDgJnrVWWcwuuI5NPMZI6LvjghbMWp3dMZDl1yyLfXpt\n7UyEp2xakcs4ZmgsLcGc57NIiQKBgQDYvW/TfzRCrtnPxKcUpjokCquu9fTk0ZqC\nM1MhBZdoMZ2qnRewvHBtFSXLvUU19HMOh+N3dtsWqn0kCFdK6Q0rS/qRK0u+faao\nVxR4G+CI/IwyN4ywMCuUecBUjPfPfMLL9dVN2zpaERDr+9DDIUyv9X9QyQ8tU0gx\nIh2XEk1LiwKBgQCUHmOJRPTtLBhG6l2qu1HMkVM0fZbUl5TVyL9ntI8iheg7mpMV\nQxgNVSKNU1jCZt6yqZ9ZZTL/ve3JkTpf++WhXp9RZgumU/3wzuGA+gTm1YtR8J9L\nVZl06q74Vcav1mHZ5WLgXF2ZDfOQbAaRq+IFBcvcia82zDEQSjDBxQLUqQKBgFFK\n9FeKfYqJVI7WPqjDFEmSawSLohf0+hPdtk9LbpeZDH8CvvD+LNjtNqjtS7lJ/6Gy\nnEGhpdkhhyBttHgXY2Ya8Fdkutsu+8RmLPpD0nru5pKrPSyUVLQy2k2cNhJvxAyG\nH0Q9duxzPDqWz51wrvfMh71APF4Ov6QWHK0eIzmzAoGACYa/4KH1ehA+MGVyuFvD\n4blsbLASw99qZdnTbJmXoJjOpTOyRPngoKQPwQhsN6nYXgKzpp77mvlNV+MLvkZz\nklBI+jsjkPmnrXbAjd6EEiUJujMyyeny9xTA+k6OiRLCMn/S5uvmFz8iNbKbES8S\nhcekJT/4abUBwomD+roDVb0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kijiji-ads-account@caramel-duality-362212.iam.gserviceaccount.com",
+  "client_id": "100514053571499405987",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kijiji-ads-account%40caramel-duality-362212.iam.gserviceaccount.com"
+}
