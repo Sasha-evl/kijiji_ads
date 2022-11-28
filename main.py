@@ -15,12 +15,13 @@ from datetime import datetime, timedelta
 import json
 import os
 import io
+from dotenv import load_dotenv
 
+load_dotenv()
 
-# database credentials
-db_user = 'test_user'
-db_pass = 's0p9UmPrwFcVeZ1y'
-db_name = 'kijiji'
+db_user = os.getenv('DB_USER')
+db_pass = os.getenv('DB_PASS')
+db_name = os.getenv('DB_NAME')
 
 # connect to MongoDB
 db.connect(host=f'mongodb+srv://test_user:{db_pass}@cluster0.kofnl7r.mongodb.net/{db_name}?retryWrites=true&w=majority')
@@ -38,13 +39,13 @@ class Ads(db.Document):
 
 
 def site_parse():
-    # Prase site with selenium
+    # Install Selenium
     chromedriver_autoinstaller.install()
     driver = webdriver.Chrome()
     driver.get('https://www.kijiji.ca/b-apartments-condos/city-of-toronto/c37l1700273')
     next_button = True
 
-    # Fetching all ads and checking for next page
+    # Fetching all ads
     while next_button:
         ads_info = driver.find_elements(By.CLASS_NAME, 'search-item')
         for ad in ads_info:
@@ -63,7 +64,7 @@ def site_parse():
             currency = ad.find_element(By.CSS_SELECTOR, 'div[class="price"]').text[0]
             price = ad.find_element(By.CSS_SELECTOR, 'div[class="price"]').text[1:]
 
-            #Save add in db
+            # Create a record in Database and save it
             add = Ads(
                 ads_title=ads_title,
                 image_url=image_url,
@@ -79,7 +80,7 @@ def site_parse():
         try:
             next_button = driver.find_element(By.CSS_SELECTOR, 'a[title="Next"]')
             next_button.click()
-        except:
+        except Exception as ex:
             break
 
 
@@ -121,7 +122,7 @@ def google_sheet_upload(google_upload_data):
             SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
     # The ID spreadsheet.
-    SAMPLE_SPREADSHEET_ID = '1IreO6pw2KK4ox1azIEno6g4BDFIUG9sybli4U4GctWU'
+    SAMPLE_SPREADSHEET_ID = os.getenv('SAMPLE_SPREADSHEET_ID')
 
     service = build('sheets', 'v4', credentials=creds)
 
@@ -130,13 +131,17 @@ def google_sheet_upload(google_upload_data):
     request = sheet.values().update(spreadsheetId=SAMPLE_SPREADSHEET_ID, range='ads!A1',
                                     valueInputOption='USER_ENTERED', body={'values': google_upload_data}).execute()
     sheet_link = 'https://docs.google.com/spreadsheets/d/' + SAMPLE_SPREADSHEET_ID
-    res_message = f'All info uploaded.\nCheck:{sheet_link}'
-    return res_message
+    result_message = f'All info uploaded.\nCheck:{sheet_link}'
+    return result_message
 
 
-if __name__ == '__main__':
+def main():
     site_parse()
     download_from_db()
     upload_data = google_data_prepare()
-    res = google_sheet_upload(upload_data)
-    print(res)
+    result = google_sheet_upload(upload_data)
+    print(result)
+
+
+if __name__ == '__main__':
+    main()
